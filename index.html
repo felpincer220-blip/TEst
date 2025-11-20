@@ -1,207 +1,107 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfolio — Lilian Bache</title>
   <meta name="description" content="Portfolio de Lilian Bache — parcours, compétences et aspirations en événementiel et IA.">
-  <!-- Polices utilisées (Fira Code, Pacifico, IBM Plex Mono + Inter fallback) -->
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Pacifico&family=IBM+Plex+Mono:wght@700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Polices du prof -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Pacifico&family=IBM+Plex+Mono:wght@700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- NAV / HEADER -->
-  <header class="header-container">
-    <nav class="navbar container" id="navbar" aria-label="Navigation principale">
-      <div class="navbar-brand">
-        <div class="brand-left">
-          <div class="profile-image" aria-hidden="true"><span class="avatar">LB</span></div>
-          <div class="brand-text">
-            <div class="brand-title">Lilian Bache</div>
-            <small class="brand-sub">Événementiel • IA</small>
-          </div>
-        </div>
-      </div>
+<header class="navbar">
+  <div class="navbar-brand">Lilian Bache</div>
+  <div class="nav-links">
+    <a href="#qui-suis-je">Qui suis-je</a>
+    <a href="#parcours">Parcours</a>
+    <a href="#competences">Compétences</a>
+    <a href="#reussites">Réussites</a>
+    <a href="#aspirations">Aspirations</a>
+    <a href="#conclure">Conclusion</a>
+  </div>
+</header>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">☰</button>
-
-      <div class="navbar-collapse" id="navLinks">
-        <a class="nav-link" href="#top">Accueil</a>
-        <a class="nav-link" href="#qui-suis-je">Qui suis-je</a>
-        <a class="nav-link" href="#parcours">Parcours</a>
-        <a class="nav-link" href="#competences">Compétences</a>
-        <a class="nav-link" href="#reussites">Réussites</a>
-        <a class="nav-link" href="#aspirations">Aspirations</a>
-        <a class="nav-link" href="#conclure">Contact</a>
+<main>
+  <!-- Hero -->
+  <header class="header-background">
+    <div class="container hero">
+      <h1 class="handwritten-font">Réfléchir pour construire un bon portfolio perso</h1>
+      <p>Découvre mon parcours, mes compétences et mes projets — un profil orienté événements & IA.</p>
+      <div class="hero-ctas">
+        <a class="btn-cv" href="#qui-suis-je">En savoir plus</a>
+        <a class="btn-cv" href="#conclure">Contact / CV</a>
       </div>
-    </nav>
+    </div>
+    <canvas id="particleCanvas"></canvas>
   </header>
 
-  <main>
+  <section class="container content">
+    <!-- Sections -->
+    <article class="card-base" id="qui-suis-je">
+      <h2 class="ibmplex-font">1. Qui suis-je ?</h2>
+      <h3>• Comment te présenterais-tu en quelques phrases ?</h3>
+      <p>Je suis quelqu’un de curieux et ouvert d’esprit, toujours en quête de nouvelles connaissances. J’aime apprendre, découvrir et relever de nouveaux défis. Ces expériences m’ont permis de développer une solide capacité d’organisation, une bonne gestion logistique et un véritable esprit d’équipe dans des environnements dynamiques et parfois concurrentiels. Je fais preuve de persévérance et d’adaptabilité, deux qualités essentielles pour mener à bien chaque projet.</p>
+      <h3>• Trois mots pour ta personnalité ?</h3>
+      <p><strong>Proactif, dynamique, sociable.</strong></p>
+      <h3>• Tes valeurs principales ?</h3>
+      <p>Curiosité, rigueur et esprit d’équipe. J’accorde aussi de l’importance à la patience et à la bienveillance dans la collaboration.</p>
+      <h3>• Anecdote</h3>
+      <p>En terminale, j’ai co-organisé *La Nuit du Volley*, un tournoi de 19h à 23h avec poules et phases éliminatoires.</p>
+    </article>
 
-    <!-- HERO with subtle SVG / background -->
-    <section id="top" class="hero header-background">
-      <div class="container hero-inner">
-        <h1 class="handwritten-font">Réfléchir pour construire un bon portfolio perso</h1>
-        <p class="hero-sub">Profil orienté gestion de projet événementiel, en transition vers l’IA — organisé, persévérant et adaptable.</p>
-        <div class="hero-actions">
-          <a href="#qui-suis-je" class="btn-cv">Découvrir</a>
-          <a href="#conclure" class="btn-cv" style="background:transparent;color:var(--primary);border:1px solid var(--primary)">Contact / CV</a>
-        </div>
+    <article class="card-base" id="parcours">
+      <h2 class="ibmplex-font">2. Parcours</h2>
+      <h3>• Diplômes</h3>
+      <p>Baccalauréat, puis licence en <em>Commercialisation des Produits et Services Sportifs</em> à l’ILEPS.</p>
+      <h3>• Matière / Projet marquant</h3>
+      <p>Les cours d’histoire et d’économie : ils m’ont aidé à comprendre les enjeux sociaux et économiques.</p>
+      <h3>• Projets associatifs & bénévolat</h3>
+      <p>Aux JO 2024 de Paris, j’étais bénévole au CDFAS (Athletica) à Ermont.</p>
+      <h3>• Expériences professionnelles</h3>
+      <p>1 mois en restauration en Écosse, 2 mois chez Décathlon, puis alternance chez Spotlag.</p>
+    </article>
+
+    <article class="card-base" id="competences">
+      <h2 class="ibmplex-font">3. Compétences</h2>
+      <h3>• Compétences techniques</h3>
+      <p>Gestion de projet, prospection, communication, négociation, développement de partenariats.</p>
+      <h3>• Soft skills</h3>
+      <p>Organisation, persévérance et adaptabilité. Je sais prioriser et rester efficace sous pression.</p>
+      <h3>• Outils</h3>
+      <p>Salesforce, Excel, Word, Canva et réseaux sociaux.</p>
+    </article>
+
+    <article class="card-base" id="reussites">
+      <h2 class="ibmplex-font">4. Réussites</h2>
+      <p>Terminer le semi-marathon de Paris ; actuellement en préparation pour le marathon de Paris.</p>
+    </article>
+
+    <article class="card-base" id="aspirations">
+      <h2 class="ibmplex-font">5. Aspirations</h2>
+      <p>Un poste lié à l’intelligence artificielle, idéalement au croisement produit & données.</p>
+    </article>
+
+    <article class="card-base" id="conclure">
+      <h2 class="ibmplex-font">7. Conclusion</h2>
+      <div class="card-actions">
+        <a class="btn-cv" href="#" download="CV-Lilian-Bache.pdf">Télécharger mon CV</a>
+        <a class="btn-cv" href="mailto:ton.email@example.com">Me contacter</a>
       </div>
-
-      <!-- decorative svg background (simple) -->
-      <div class="svg-background" aria-hidden="true">
-        <!-- small decorative SVG wave -->
-        <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,80 C360,200 1080,0 1440,80 L1440 200 L0 200 Z" fill="rgba(10,37,64,0.02)"></path>
-        </svg>
-      </div>
-    </section>
-
-    <!-- Prompt demo (ChatGPT-like) -->
-    <section class="container" id="prompt-demo" aria-labelledby="prompt-title">
-      <div class="prompt-container">
-        <div class="prompt-box" role="region" aria-label="Générateur d'exemple">
-          <div class="dev-font">Exemple de prompt: <strong>Présente mon profil en 2 phrases</strong></div>
-          <button id="send-button" class="btn-cv">Générer</button>
-        </div>
-        <div id="response-box" class="response-box" aria-live="polite">
-          <span id="loading-dots" style="display:none">...</span>
-          <div id="response-text" style="display:none"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MAIN CONTENT: cards & timeline -->
-    <section class="container content">
-
-      <!-- Qui suis-je -->
-      <article id="qui-suis-je" class="card card-base tech-card">
-        <h2>1. Qui suis-je ? (Identité &amp; personnalité)</h2>
-        <p class="lead">Je suis quelqu’un de curieux et ouvert d’esprit, toujours en quête de nouvelles connaissances. J’aime apprendre, découvrir et relever de nouveaux défis. Ces expériences m’ont permis de développer une solide capacité d’organisation, une bonne gestion logistique et un véritable esprit d’équipe dans des environnements dynamiques. Je fais preuve de persévérance et d’adaptabilité pour mener chaque projet à bien.</p>
-
-        <div class="grid-2">
-          <div>
-            <h3>Trois mots</h3>
-            <p class="ibmplex-font">Proactif · Dynamique · Sociable</p>
-          </div>
-          <div>
-            <h3>Valeurs</h3>
-            <p>Curiosité, rigueur, esprit d’équipe.</p>
-          </div>
-        </div>
-
-        <h3>Anecdote</h3>
-        <p>En terminale, j’ai co-organisé <em>La Nuit du Volley</em>, un tournoi nocturne (19h–23h). J’y ai appris la coordination d’équipe, la gestion des imprévus et la satisfaction de mener un projet collectif à son terme.</p>
-      </article>
-
-      <!-- Parcours -->
-      <article id="parcours" class="card card-base peda-card">
-        <h2>2. Parcours (académique &amp; extrascolaire)</h2>
-        <p><strong>Diplômes :</strong> Baccalauréat — Licence en <em>Commercialisation des Produits et Services Sportifs</em> (ILEPS).</p>
-
-        <h3>Expériences marquantes</h3>
-        <p>Aux JO 2024 de Paris, bénévole au CDFAS (Ermont) : construction d'installations, préparation d'équipements, ravitaillement.</p>
-
-        <h3>Missions professionnelles</h3>
-        <p>1 mois en restauration en Écosse, 2 mois chez Décathlon, alternance chez Spotlag (événementiel) : gestion de projet, relation client.</p>
-      </article>
-
-      <!-- Compétences -->
-      <article id="competences" class="card card-base tech-card">
-        <h2>3. Compétences</h2>
-        <div class="grid-2">
-          <div>
-            <h3>Techniques</h3>
-            <p>Gestion de projet, prospection, communication, négociation, partenariats.</p>
-          </div>
-          <div>
-            <h3>Outils</h3>
-            <p>Salesforce, Excel, Word, Canva, réseaux sociaux.</p>
-          </div>
-        </div>
-
-        <h3>Soft skills</h3>
-        <p>Organisation (jusqu’à 20 projets/semaine), persévérance et adaptabilité.</p>
-      </article>
-
-      <!-- Timeline / Réussites -->
-      <article id="reussites" class="card card-base peda-card">
-        <h2>4. Réussites &amp; fiertés</h2>
-
-        <div id="experience" class="timeline">
-          <div class="timeline-item left">
-            <h3>2024 — JO de Paris (Bénévolat)</h3>
-            <p>Gestion logistique, préparation d'installations sportives.</p>
-          </div>
-
-          <div class="timeline-item right">
-            <h3>2023 — Spotlag (Alternance)</h3>
-            <p>Chef de projet événementiel — coordination et relation client.</p>
-          </div>
-
-          <div class="timeline-item left">
-            <h3>2022 — Semi-marathon de Paris</h3>
-            <p>Performance sportive &amp; gestion de l'entraînement.</p>
-          </div>
-        </div>
-
-        <h3>Projets à montrer</h3>
-        <p>La Nuit du Volley ; missions chez Spotlag — à compléter avec photos.</p>
-        <h3>Prochain challenge</h3>
-        <p>Marathon de Paris (avril).</p>
-      </article>
-
-      <!-- Aspirations -->
-      <article id="aspirations" class="card card-base tech-card">
-        <h2>5. Aspirations</h2>
-        <p>Je vise un poste lié à l’intelligence artificielle, idéalement au croisement produit &amp; donnée. Je souhaite approfondir mes compétences en machine learning et data science tout en continuant à gérer des projets à impact.</p>
-        <p class="muted">Job de rêve : rôle flexible, international, qui permet de voyager et d’avoir un impact concret.</p>
-      </article>
-
-      <!-- Conclusion & Contact -->
-      <article id="conclure" class="card card-base peda-card">
-        <h2>Conclusion &amp; contact</h2>
-        <p>Profil atypique, adaptable et motivé — prêt à apporter rigueur et créativité à une équipe.</p>
-
-        <div id="status"></div>
-
-        <form id="contact-form" class="contact-form" aria-label="Formulaire de contact">
-          <input type="text" name="from_name" placeholder="Ton nom" required>
-          <input type="email" name="reply_to" placeholder="Ton e-mail" required>
-          <textarea name="message" rows="4" placeholder="Message..." required></textarea>
-          <div class="form-actions">
-            <button type="submit" class="btn-cv">Envoyer</button>
-            <a class="btn-cv" href="CV-Lilian-Bache.pdf" download> Télécharger CV</a>
-          </div>
-        </form>
-      </article>
-
-    </section>
-
-    <!-- Special section with particles (visual emphasis) -->
-    <section id="special-section" class="special-section">
-      <canvas id="particleCanvas" aria-hidden="true"></canvas>
-      <div class="container">
-        <h2 style="text-align:center">Projets & démonstrations</h2>
-        <p style="text-align:center;color:var(--secondary-deep)">Section mise en valeur — particules et effets quand visible.</p>
-      </div>
-    </section>
-
-  </main>
+    </article>
+  </section>
 
   <footer>
     <div class="container">
-      <small>&copy; 2025 — Lilian Bache — Tous droits réservés</small>
+      <small>&copy; 2025 — Lilian Bache</small>
     </div>
   </footer>
 
-  <button class="back-to-top" aria-label="Retour en haut" title="Retour en haut">↑</button>
+  <button class="back-to-top">↑</button>
 
-  <!-- EmailJS (optionnel) -->
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
